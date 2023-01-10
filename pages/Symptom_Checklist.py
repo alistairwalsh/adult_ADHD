@@ -63,12 +63,8 @@ df = pd.DataFrame({'Question':results.keys(),'Answer':results.values()})
 
 df.index = df.index + 1
 
-
-st.text(df.index)
-
-
 def convert_df(df):
-   return df.to_csv(index=False).encode('utf-8')
+   return df.to_csv().encode('utf-8')
 
 csv = convert_df(df)
 
