@@ -50,4 +50,6 @@ results = {q:'' for q in text}
 for k,v in results.items():
     results[k] = st.radio(k,options, horizontal = True, index = 2)
 
-st.text(results)
+
+df = pd.DataFrame(results)
+st.text(df)
