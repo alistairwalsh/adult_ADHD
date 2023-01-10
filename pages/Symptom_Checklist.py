@@ -46,7 +46,5 @@ text = [
 'How often do you interrupt others when they are busy?']
 
 df = pd.DataFrame({'question':text})
-
-for num,question in enumerate(text,start = 1):
-    st.radio(df, options, horizontal = True, index = 2)
+st.radio(df)
 
