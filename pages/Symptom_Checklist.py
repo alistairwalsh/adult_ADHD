@@ -100,6 +100,6 @@ for line in text:
     if not line.isnumeric():
         st.text(line)
     else:
-        st.heading(line)
+        st.header(line)
 
 #st.radio('')
