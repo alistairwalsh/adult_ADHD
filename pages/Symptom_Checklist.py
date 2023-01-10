@@ -95,7 +95,7 @@ when they are busy? '''
 text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych']]
 
 for line in text:
-    if not isnumeric(line):
+    if not line.isnumeric():
         st.text(line.strip())
 
 #st.radio('')
