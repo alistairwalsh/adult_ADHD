@@ -48,8 +48,9 @@ text = [
 results = {q:'' for q in text}
 
 for k,v in results.items():
-    results[k] = [st.radio(k,options, horizontal = True, index = 2)]
+    results[k] = st.radio(k,options, horizontal = True, index = 2)
 
-
+results = {k:[v] for k,v in results.items()}
 df = pd.DataFrame(results)
-st.text(df)
+
+st.dataframe(df)
