@@ -93,7 +93,7 @@ How often do you interrupt others
 when they are busy? '''
 
 
-text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych']]
+text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych','PART A -','PART B -']]
 
 for line in text:
     line = line.strip()
