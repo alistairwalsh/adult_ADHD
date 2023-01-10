@@ -45,7 +45,7 @@ text = [
 'How often do you interrupt others when they are busy?']
 
 for num,question in enumerate(text,start = 1):
-    st.radio(num + ': ' + question, options, horizontal = True, index = 2)
+    st.radio(str(num) + ': ' + question, options, horizontal = True, index = 2)
 
 #text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych','PART A -','PART B -']]
 
