@@ -58,7 +58,7 @@ results = {q:'' for q in text}
 for k,v in results.items():
     results[k] = st.radio(k,options, horizontal = True, index = 2)
 
-results = {k:[v] for k,v in results.items()}
+#results = {k:[v] for k,v in results.items()}
 df = pd.DataFrame({'Question':results.keys(),'Answer':results.values()})
 
 df.index = df.index + 1
