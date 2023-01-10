@@ -1,6 +1,14 @@
 import streamlit as st
 import pandas as pd
 
+
+def score_ADHD(df):
+    '''1-3, 9, 12, 16, and 18 ratings of sometimes, often, or very often are assigned one point (ratings of never or rarely are assigned zero points).
+    For the remaining 11 items, ratings of often or very often are assigned one point (ratings of never, rarely, or sometimes are assigned zero points).
+    '''
+    a = [1,2,3,9,12,16,18]
+    b = [4,5,6,7,8,10,11,13,14,15,17]
+
 st.text('''Instructions:
 Please answer the questions below, rating yourself on each of the criteria shown. As you
 answer each question, select the box that best describes how you have felt and conducted
@@ -54,5 +62,7 @@ results = {k:[v] for k,v in results.items()}
 df = pd.DataFrame({'Question':results.keys(),'Answer':results.values()})
 
 st.dataframe(df)
+
+st.text(df.index)
 
 st.json(results)
