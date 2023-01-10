@@ -5,7 +5,7 @@ Please answer the questions below, rating yourself on each of the criteria shown
 answer each question, select the box that best describes how you have felt and conducted
 yourself over the past 6 months.''')
 
-options = ['Never','Rarely','Sometimes','Often','Very Often']
+options = ('Never','Rarely','Sometimes','Often','Very Often')
 
 text = [
 'How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?',
@@ -45,8 +45,7 @@ text = [
 'How often do you interrupt others when they are busy?']
 
 for question in text:
-    st.text(question)
-    st.text(options)
+    st.radio(question, options)
 
 #text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych','PART A -','PART B -']]
 
