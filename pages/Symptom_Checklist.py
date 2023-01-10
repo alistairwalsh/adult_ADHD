@@ -54,3 +54,5 @@ results = {k:[v] for k,v in results.items()}
 df = pd.DataFrame(results)
 
 st.dataframe(df)
+
+st.json(results)
