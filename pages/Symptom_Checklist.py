@@ -61,8 +61,7 @@ for k,v in results.items():
 results = {k:[v] for k,v in results.items()}
 df = pd.DataFrame({'Question':results.keys(),'Answer':results.values()})
 
-st.dataframe(df)
+df.index = df.index + 1
+
 
 st.text(df.index)
-
-st.json(results)
