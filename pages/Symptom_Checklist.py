@@ -88,14 +88,18 @@ How often do you have difficulty waiting
 your turn in situations when turn taking is
 required?
 0 0 0 1 1
-18 How often do you interrupt others
+18 
+How often do you interrupt others
 when they are busy? '''
 
 
 text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych']]
 
 for line in text:
+    line = line.strip()
     if not line.isnumeric():
-        st.text(line.strip())
+        st.text(line)
+    else:
+        st.heading(line)
 
 #st.radio('')
