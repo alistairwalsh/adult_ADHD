@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.text('''Instructions:
 Please answer the questions below, rating yourself on each of the criteria shown. As you
@@ -44,16 +45,8 @@ text = [
 
 'How often do you interrupt others when they are busy?']
 
+df = pd.DataFrame({'question':text})
+
 for num,question in enumerate(text,start = 1):
-    st.radio(str(num) + ': ' + question, options, horizontal = True, index = 2)
+    st.radio(df, options, horizontal = True, index = 2)
 
-#text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych','PART A -','PART B -']]
-
-# for line in text:
-#     line = line.strip()
-#     if not line.isnumeric():
-#         st.text(line)
-#     else:
-#         st.header(line)
-
-#st.radio('')
