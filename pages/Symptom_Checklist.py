@@ -44,9 +44,10 @@ text = [
 
 'How often do you interrupt others when they are busy?']
 
+for question in text:
+    st.text(question)
+    st.text(options)
 
-st.text(options)
-st.text([question for question in text])
 #text = [part for part in text.split('\n') if part.strip() not in ['Page 1 of 2', 'NovoPsych','PART A -','PART B -']]
 
 # for line in text:
