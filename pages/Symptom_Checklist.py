@@ -51,7 +51,7 @@ for k,v in results.items():
     results[k] = st.radio(k,options, horizontal = True, index = 2)
 
 results = {k:[v] for k,v in results.items()}
-df = pd.DataFrame(results)
+df = pd.DataFrame({'Question':results.keys(),'Answer':results.values()})
 
 st.dataframe(df)
 
