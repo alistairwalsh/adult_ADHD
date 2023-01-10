@@ -91,6 +91,8 @@ required?
 18 How often do you interrupt others
 when they are busy? '''
 
-st.text(text)
+
+for line in text.split('\n'):
+    st.text(line)
 
 #st.radio('')
