@@ -92,7 +92,9 @@ required?
 when they are busy? '''
 
 
-for line in text.split('\n'):
+text = [part for part in text.split('\n') if part not in ['Page 1 of 2', 'NovoPsych']]
+
+for line in text:
     st.text(line)
 
 #st.radio('')
