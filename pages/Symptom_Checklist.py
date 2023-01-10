@@ -45,13 +45,8 @@ text = [
 
 'How often do you interrupt others when they are busy?']
 
-df = pd.DataFrame({'question':text})
-df['Never'] = 0
-df['Rarely'] = 0
-df['Sometimes'] = 0
-df['Often'] = 0
-df['Very Often'] = 0
+results = {q:'' for q in text}
 
-st.dataframe(df)
-#st.radio('questions',df, options = options)
+for k,v in results.items():
+    results[k] = st.radio(k,options, horizontal = True, index = 2)
 
